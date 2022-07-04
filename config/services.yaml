@@ -39,4 +39,4 @@ services:
 
     App\DataFixtures\AppFixtures:
         calls:
-            - [ setOptions, [ '%app.fixture_options%' ] ]
+            - setOptions: [ '%app.fixture_options%' ]
