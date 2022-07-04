@@ -1,8 +1,56 @@
-# Symfony Docker
+# Simple Symfony application based on symfony-docker
 
-A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework, with full [HTTP/2](https://symfony.com/doc/current/weblink.html), HTTP/3 and HTTPS support.
+A RESTful application, that contain 2 entities - `Account` and `Team` with following structure:
+``` 
+Account {
+    int $id
+    string $name
+    int $teamId
+}
+```
 
-![CI](https://github.com/dunglas/symfony-docker/workflows/CI/badge.svg)
+```
+Team
+{
+    int $id
+    string $name
+}
+```
+Entity exposed in ApiPlatform UI by `/api` endpoint.
+
+Data for test purposes can be generated on the fly on demand by data fixtrures (`php bin/console doctrine:fixtures:load`).
+Number of generated records can be editable in config file(`config/services.yml`)
+
+This application provides reports in json and xml formats by following endpoints:
+`/api/report/json`
+`/api/report/xml`
+
+Example of `JSON` report should be like this:
+```
+{
+    "teams": [
+        {
+            "name": "Team Alpha",
+            "size": 2,
+            "accounts": [
+                {
+                    "id": 1,
+                    "name": "John Doe"
+                },
+                {
+                    "id": 2,
+                    "name": "Jane Doe"
+                }
+            ]
+        },
+        {
+            "name": "Team Bravo",
+            "size": 0,
+            "accounts": []
+        }
+    ]
+}
+```
 
 ## Getting Started
 
