@@ -12,18 +12,6 @@ A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony
 4. Open `https://localhost` in your favorite web browser and [accept the auto-generated TLS certificate](https://stackoverflow.com/a/15076602/1352334)
 5. Run `docker-compose down --remove-orphans` to stop the Docker containers.
 
-## Features
-
-* Production, development and CI ready
-* Automatic HTTPS (in dev and in prod!)
-* HTTP/2, HTTP/3 and [Preload](https://symfony.com/doc/current/web_link.html) support
-* Built-in [Mercure](https://symfony.com/doc/current/mercure.html) hub
-* [Vulcain](https://vulcain.rocks) support
-* Just 2 services (PHP FPM and Caddy server)
-* Super-readable configuration
-
-**Enjoy!**
-
 ## Docs
 
 1. [Build options](docs/build.md)
@@ -33,7 +21,3 @@ A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony
 5. [Installing Xdebug](docs/xdebug.md)
 6. [Using a Makefile](docs/makefile.md)
 7. [Troubleshooting](docs/troubleshooting.md)
-
-## Credits
-
-Created by [Kévin Dunglas](https://dunglas.fr), co-maintained by [Maxime Helias](https://twitter.com/maxhelias) and sponsored by [Les-Tilleuls.coop](https://les-tilleuls.coop).
